@@ -1,0 +1,27 @@
+.boxes {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.form {
+    text-align: center;
+}
+
+body {
+    background-image: url(https://d3iqwsql9z4qvn.cloudfront.net/wp-content/uploads/2020/10/28142253/dominos-story-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sign_in_button {
+    margin-top: 10px;
+    background-color: rgb(19, 206, 206);
+}
+
+.logo {
+    height: 170px;
+    position: absolute;
+    margin-left:565px;
+    margin-top: 150px;
+}

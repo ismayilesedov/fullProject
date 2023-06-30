@@ -86,6 +86,10 @@ a {
     background-color: transparent;
 }
 
+.buttons {
+    margin-top: 18px;
+}
+
 .search_form {
     position: absolute;
     top: 115%;
@@ -149,18 +153,93 @@ a {
 
 }
 
-.basket.active{
+.basket.active {
     display: block;
     transform: scaleY(1);
 }
+
 .basket {
     width: 350px;
     height: 650px;
     background-color: white;
     position: absolute;
     margin-top: 38px;
-    /* display: none; */
     transform: scaleY(0);
+    position: absolute;
+}
+
+.basket_item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket_item ul li {
+    font-size: 20px;
+}
+
+.basket_item_buttons {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.basket_item_buttons p {
+    padding: 13px;
+    margin-left: 8px;
+}
+
+.basket_item_count {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -41px;
+    padding: 12px;
+    width: 5px;
+    height: 5px;
+    left: 25px;
+
+}
+
+.basket_count {
+    padding: 10px;
+}
+
+.basket_photo {
+    width: 80px;
+    height: 80px;
+    margin-left: 40px;
+}
+
+.subtotal {
+    font-size: 19px;
+}
+
+.rmv-btn {
+    border: 3px solid red;
+    gap: 2px;
+}
+
+.basket_item ul {
+    list-style: none;
+    /* border: 1px solid grey; */
+}
+
+.basket_item ul li {
+    /* border-bottom: 1px solid red; */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.basket_item ul .basket_item_count {
+    display: flex;
 }
 
 .btn {
@@ -249,12 +328,14 @@ section span {
     background-color: white;
     padding: 5rem;
     border-radius: 4rem;
-    width: 48rem;
+    width: 44rem;
     min-height: 60rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+
 }
 
 .product_images {
@@ -300,7 +381,7 @@ section span {
 
 .products .box_container .box_bottom .product_button {
     position: relative;
-    margin-left: 275px;
+    margin-left: 240px;
     border-radius: 50%;
     color: red;
     border: 0.2rem solid red;
@@ -352,7 +433,7 @@ section span {
     background-color: white;
     padding: 3rem 2rem;
     border-radius: 4rem;
-    width: 48rem;
+    width: 44rem;
 }
 
 .review {
@@ -450,7 +531,7 @@ section span {
     background-color: white;
     padding: 3rem 2rem;
     border-radius: 4rem;
-    width: 48rem;
+
 }
 
 .blogs {
@@ -478,7 +559,7 @@ section span {
     background-color: white;
     padding: 3rem 2rem;
     border-radius: 4rem;
-    width: 48rem;
+    width: 44rem;
     margin-left: 2rem;
 
 }
@@ -642,5 +723,28 @@ section span {
 
     .header .navbar.active {
         right: 3rem;
+    }
+
+    .menu .box_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 10px 15px; */
+    }
+
+    .products .box_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px 15px;
+    }
+
+    .review .box_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px 15px;
+    }
+    .blogs .box_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px 15px;
     }
 }

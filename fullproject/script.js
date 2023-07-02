@@ -25,28 +25,28 @@ let products = [
     {
         id: 1,
         name: '6 Mini Pizzas',
-        price: '$104.99',
+        price: 104.99,
         img: "/images/menu-1.png"
 
     },
     {
         id: 2,
         name: '5 Mini Burgers',
-        price: '$99.99 ',
+        price: 99.99,
         img: "/images/menu-2.png"
 
     },
     {
         id: 3,
         name: '2 Mixed Pizza',
-        price: '$49.99',
+        price: 49.99,
         img: "/images/menu-3.png"
 
     },
     {
         id: 4,
         name: '3 Burgers',
-        price: '$79.99',
+        price: 79.99,
         img: "/images/menu-4.png"
 
     },
@@ -90,7 +90,7 @@ function handleRender() {
                         <img class="menu_image" src="${product.img}" alt="">
                         <span class="menu_catagory">Pizza</span>
                         <h3>${product.name}</h3>
-                        <div class="price">${product.price} <span>119.99
+                        <div class="price">$${product.price} <span>119.99
                             </span></div>
                     </div>
                     <div class="box_button">
@@ -130,7 +130,6 @@ function addtoCart(productId) {
 
     if (isExist) {
         handleChangeCount('plus', currentProduct.id)
-
     } else {
         cartItems.push({ ...currentProduct, count: 1 })
     }
@@ -155,12 +154,14 @@ function handleRenderCartItem() {
             <button class="count-changer" onclick="handleChangeCount('plus',${item.id})">+</button>
         </div>
         <b class="price">${item.price}</b>
-        <button class="rmv-btn onclick="handleRemove(${item.id})">X</button>
+        <button class="rmv-btn deleteButton">X</button>
+
     </li>
         `
     })
 
 }
+
 
 
 let basketCount = document.querySelector(".basket_count");
@@ -171,7 +172,6 @@ function handleChangeCount(action, id) {
             if (action === 'minus') {
                 if (item.count > 1) {
                     oldCount--;
-
                 }
 
             } else {
@@ -191,12 +191,13 @@ function handleChangeCount(action, id) {
 }
 
 
+// let removeButton=document.querySelector(".deleteButton");
+
+// removeButton.addEventListener("click",handleRemove(item.id));
 
 
 function handleRemove(productId) {
-
     cartItems = cartItems.filter((item) => item.id !== productId);
-
     upload();
 }
 
@@ -209,12 +210,13 @@ function sumTotal() {
     cartItems.map((item) => {
 
         totalPrice += item.price * item.count;
+        let round=totalPrice.toFixed(2);
         totalCount += item.count;
 
     })
 
     subtotal.innerHTML = `
-    <b>Total:${totalPrice}</b>
+    <b>Total:$${totalPrice}</b>
     <b>All-Products:${totalCount}</b>
     `
 
@@ -233,9 +235,6 @@ if (localStorage.getItem("cart")) {
     upload();
 
 }
-
-
-
 
 
 

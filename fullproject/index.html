@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css
+" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <title>Document</title>
@@ -17,7 +22,6 @@
 
     <header class="header">
         <a class="logo" href="">
-            <!-- <img src="" alt="logo"> -->
             <img src="/images/logo.png" alt="logo">
         </a>
         <nav class="navbar active">
@@ -46,21 +50,19 @@
             <div class="basket">
                 <div class="basket_item">
                     <ul>
-                       
+
                     </ul>
-                
-                   
+                </div>
+
+                <div class="subtotal">
+
+                </div>
             </div>
-           
-            <div class="subtotal">
-                
+
+            <div class="search_form  ">
+                <input type="text" class="search_input" id="search_box" placeholder="Search Here">
+                <i class="fas fa-search"></i>
             </div>
-        </div>
-       
-        <div class="search_form  ">
-            <input type="text" class="search_input" id="search_box" placeholder="Search Here">
-            <i class="fas fa-search"></i>
-        </div>
 
     </header>
 
@@ -88,68 +90,8 @@
 
 
             <div class="box_container">
-                <!-- <div class="box">
-                    <div class="box_head">
-                        <img class="menu_image" src="/images/menu-1.png" alt="">
-                        <span class="menu_catagory">Pizza</span>
-                        <h3>6 Mini Pizzas</h3>
-                        <div class="price">$104.99 <span>119.99
-                            </span></div>
-                    </div>
-                    <div class="box_button">
-                        <a class="btn" href="">Add to Card</a>
-                    </div> -->
-                </div>
-
-            <!-- </div>
-            <div class="box_container">
-                <div class="box">
-                    <div class="box_head">
-                        <img class="menu_image" src="/images/menu-1.png" alt="">
-                        <span class="menu_catagory">Pizza</span>
-                        <h3>6 Mini Pizzas</h3>
-                        <div class="price">$104.99 <span>119.99
-                            </span></div>
-                    </div>
-                    <div class="box_button">
-                        <a class="btn" href="">Add to Card</a>
-                    </div>
-                </div>
-
+              
             </div>
-            <div class="box_container">
-                <div class="box">
-                    <div class="box_head">
-                        <img class="menu_image" src="/images/menu-1.png" alt="">
-                        <span class="menu_catagory">Pizza</span>
-                        <h3>6 Mini Pizzas</h3>
-                        <div class="price">$104.99 <span>119.99
-                            </span></div>
-                    </div>
-                    <div class="box_button">
-                        <a class="btn" href="">Add to Card</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="box_container">
-                <div class="box">
-                    <div class="box_head">
-                        <img class="menu_image" src="/images/menu-1.png" alt="">
-                        <span class="menu_catagory">Pizza</span>
-                        <h3>6 Mini Pizzas</h3>
-                        <div class="price">$104.99 <span>119.99
-                            </span></div>
-                    </div>
-                    <div class="box_button">
-                        <a class="btn" href="">Add to Card</a>
-                    </div>
-                </div>
-
-            </div> -->
-
-
-
         </section>
 
         <section id="product">
@@ -450,7 +392,9 @@
 
 
 
-
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js
+    "></script>
 
     <script src="/fullproject/jquery-3.7.0.min.js"></script>
     <script src="https://kit.fontawesome.com/0c3ac26755.js" crossorigin="anonymous"></script>

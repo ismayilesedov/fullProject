@@ -133,8 +133,22 @@ function addtoCart(productId) {
     } else {
         cartItems.push({ ...currentProduct, count: 1 })
     }
-
-
+    // const Toast = Swal.mixin({
+    //     toast: true,
+    //     position: 'top-end',
+    //     showConfirmButton: false,
+    //     timer: 3000,
+    //     timerProgressBar: true,
+    //     didOpen: (toast) => {
+    //       toast.addEventListener('mouseenter', Swal.stopTimer)
+    //       toast.addEventListener('mouseleave', Swal.resumeTimer)
+    //     }
+    //   })
+      
+    //   Toast.fire({
+    //     icon: 'success',
+    //     title: 'Signed in successfully'
+    //   })
     upload()
 }
 
@@ -158,6 +172,8 @@ function handleRenderCartItem() {
 
     </li>
         `
+
+        
     })
 
 }
@@ -196,8 +212,16 @@ function handleChangeCount(action, id) {
 // removeButton.addEventListener("click",handleRemove(item.id));
 
 
-function handleRemove(productId) {
+function handleRemove(deleteAll,productId) {
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
     cartItems = cartItems.filter((item) => item.id !== productId);
+
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+
+    handleRenderCartItem();
+
+
     upload();
 }
 
@@ -227,6 +251,7 @@ function upload() {
     sumTotal();
     handleRenderCartItem();
     localStorage.setItem("cart", JSON.stringify(cartItems));
+    
 }
 
 

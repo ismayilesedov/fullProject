@@ -727,11 +727,11 @@ section span {
 
     .menu .box_container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         /* gap: 10px 15px; */
     }
 
-    .products .box_container {
+    /* .products .box_container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 10px 15px;
@@ -746,5 +746,5 @@ section span {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 10px 15px;
-    }
+    } */
 }
